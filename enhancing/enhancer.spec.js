@@ -92,6 +92,20 @@ describe('enhancers', () => {
       };
       const actual = fail(originalItem);
       expect(actual).toEqual(expected);
-    })
+    });
+    it('should decrease the enchantment level by 1 if enhancement is greater than 16', () => {
+      const originalItem = {
+        name: 'club',
+        durability: 70,
+        enhancement: 18,
+      };
+      const expected = {
+        name: 'club',
+        durability: 60,
+        enhancement: 17,
+      };
+      const actual = fail(originalItem);
+      expect(actual).toEqual(expected);
+    });
   });
 });
