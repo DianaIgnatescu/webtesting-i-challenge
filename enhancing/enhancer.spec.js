@@ -1,7 +1,7 @@
-const { repair, succeed, fail } = require('./enhancer.js');
+const { repair, succeed, fail, get } = require('./enhancer.js');
 // test away!
 
-describe('enhancers', () => {
+describe('Enhancers', () => {
   describe('repair function', () => {
     it('should restore the durability of an item to 100', () => {
       const originalItem = {
@@ -105,6 +105,23 @@ describe('enhancers', () => {
         enhancement: 17,
       };
       const actual = fail(originalItem);
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('get function', () => {
+    it('should not modify the item\'s name if the enhancement level is 0', () => {
+      const originalItem = {
+        name: 'club',
+        durability: 70,
+        enhancement: 0,
+      };
+      const expected = {
+        name: 'club',
+        durability: 70,
+        enhancement: 0,
+      };
+      const actual = get(originalItem);
       expect(actual).toEqual(expected);
     });
   });

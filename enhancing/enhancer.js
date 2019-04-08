@@ -32,5 +32,8 @@ function repair(item) {
 }
 
 function get(item) {
+  if (item.enhancement === 0) {
+    return {...item};
+  }
   return { ...item };
 }
