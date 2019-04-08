@@ -124,5 +124,19 @@ describe('Enhancers', () => {
       const actual = get(originalItem);
       expect(actual).toEqual(expected);
     });
+    it('should change the name to include enhancement level preceded by a + sign if the enhancement level is greater than 0', () => {
+      const originalItem = {
+        name: 'club',
+        durability: 70,
+        enhancement: 5,
+      };
+      const expected = {
+        name: `[+5] club`,
+        durability: 70,
+        enhancement: 5,
+      };
+      const actual = get(originalItem);
+      expect(actual).toEqual(expected);
+    });
   });
 });

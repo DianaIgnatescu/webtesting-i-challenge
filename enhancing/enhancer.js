@@ -35,5 +35,8 @@ function get(item) {
   if (item.enhancement === 0) {
     return {...item};
   }
+  if (item.enhancement > 0) {
+    return {...item, name: `[+${item.enhancement}] ${item.name}` }
+  }
   return { ...item };
 }
