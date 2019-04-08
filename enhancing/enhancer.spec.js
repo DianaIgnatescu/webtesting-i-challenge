@@ -48,5 +48,19 @@ describe('enhancers', () => {
       const actual = succeed(originalItem);
       expect(actual).toEqual(expected);
     });
+    it('should not change the durability of the item', () => {
+      const originalItem = {
+        name: 'sword',
+        durability: 70,
+        enhancement: 20,
+      };
+      const expected = {
+        name: 'sword',
+        durability: 70,
+        enhancement: 20,
+      };
+      const actual = succeed(originalItem);
+      expect(actual).toEqual(expected);
+    })
   });
 });
