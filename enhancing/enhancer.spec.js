@@ -34,5 +34,19 @@ describe('enhancers', () => {
       const actual = succeed(originalItem);
       expect(actual).toEqual(expected);
     });
+    it('should not change the enhancement level if the enhancement level is 20', () => {
+      const originalItem = {
+        name: 'sword',
+        durability: 70,
+        enhancement: 20,
+      };
+      const expected = {
+        name: 'sword',
+        durability: 70,
+        enhancement: 20,
+      };
+      const actual = succeed(originalItem);
+      expect(actual).toEqual(expected);
+    });
   });
 });
