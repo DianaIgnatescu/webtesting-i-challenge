@@ -1,5 +1,6 @@
-const { repair, succeed, fail, get } = require('./enhancer.js');
-// test away!
+const {
+  repair, succeed, fail, get,
+} = require('./enhancer.js');
 
 describe('Enhancers', () => {
   describe('repair function', () => {
@@ -64,7 +65,7 @@ describe('Enhancers', () => {
     });
   });
 
-  describe('fail function',() => {
+  describe('fail function', () => {
     it('should decrease the durability of the item by 5 if the enhancement is less than 15', () => {
       const originalItem = {
         name: 'club',
@@ -131,7 +132,7 @@ describe('Enhancers', () => {
         enhancement: 5,
       };
       const expected = {
-        name: `[+5] club`,
+        name: '[+5] club',
         durability: 70,
         enhancement: 5,
       };
