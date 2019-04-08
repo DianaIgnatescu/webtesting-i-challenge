@@ -78,6 +78,20 @@ describe('enhancers', () => {
       };
       const actual = fail(originalItem);
       expect(actual).toEqual(expected);
+    });
+    it('should decrease the durability of the item by 10 if the enhancement is 15 or more', () => {
+      const originalItem = {
+        name: 'club',
+        durability: 70,
+        enhancement: 16,
+      };
+      const expected = {
+        name: 'club',
+        durability: 60,
+        enhancement: 16,
+      };
+      const actual = fail(originalItem);
+      expect(actual).toEqual(expected);
     })
-  })
+  });
 });
