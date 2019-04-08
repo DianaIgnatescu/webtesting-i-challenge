@@ -1,0 +1,26 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "description": "In this project, you will demonstrate proficiency by writing unit tests and production code to satisfy the _Minimum Viable Product_ described below.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianaIgnatescu/webtesting-i-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DianaIgnatescu/webtesting-i-challenge/issues"
+  },
+  "homepage": "https://github.com/DianaIgnatescu/webtesting-i-challenge#readme",
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^24.7.1"
+  }
+}
